@@ -1,0 +1,53 @@
+.mod-only-lg {
+  @include w-to($screen-lg) {
+    display: none !important;
+  }
+}
+
+.mod-only-sm {
+  @include w-from($screen-md) {
+    display: none !important;
+  }
+}
+
+.mod-to-md {
+  @include w-from($screen-lg) {
+    display: none !important;
+  }
+}
+
+.mod-only-md {
+  @include w-to($screen-md) {
+    display: none !important;
+  }
+  @include w-from($screen-lg) {
+    display: none !important;
+  }
+}
+
+.mod-no-sm {
+  @include w-to($screen-md) {
+    display: none !important;
+  }
+}
+
+.mod-no-md {
+  @include w-range($screen-md, $screen-lg) {
+    display: none !important;
+  }
+}
+
+.mod-no-lg {
+  @include w-from($screen-lg) {
+    display: none !important;
+  }
+}
+
+.mod-no-wrap {
+  white-space: nowrap;
+}
+
+.mod-hidden {
+  opacity:    0 !important;
+  visibility: hidden !important;
+}

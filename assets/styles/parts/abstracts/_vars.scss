@@ -1,0 +1,30 @@
+// Размеры экрана
+$screen-sm:            375px;
+$screen-md:            768px;
+$screen-lg:            1280px;
+$screen-xl:            1680px;
+
+// Переходы
+$transition-slow:      .35s;
+$transition-normal:    .25s;
+$transition-fast:      .1s;
+
+// Переходы для ховера
+$transition-hover-on:  $transition-fast;
+$transition-hover-off: $transition-normal;
+
+// Шрифты
+$font-family-default:  sans-serif;
+$font-size-default: 16px;
+$font-weight-default: 400;
+
+// Цвета
+$color-accent:         #b20000;
+$color-text:           #333333;
+$color-link:           #2d9cdb;
+$color-link-hover:     #23527c;
+
+$bold:                 700;
+$semi:                 600;
+$medium:               500;
+$regular:              400;
