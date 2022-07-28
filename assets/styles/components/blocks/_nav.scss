@@ -1,19 +1,51 @@
 .nav {
+  // display: none;
+
+  @include w-to($screen-md) {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    z-index: 20;
+
+    width: 100%;
+    padding: 20px 15px;
+    
+    background-color: $color-gray;
+    opacity: 0;
+
+    transition-property: left, opacity;
+    transition-duration: $transition-slowly;
+    transition-timing-function: $transition-function;
+
+    &.m-active {
+      left: 0;
+      opacity: 1;
+    }
+  }
+ 
   &__list {
-    display: flex;
-    align-items: center;
+    @include w-from($screen-md) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
   }
 
   &__item {
     &:not(:last-child) {
-      margin-right: 15px;
+      margin-bottom: 15px;
+
+      @include w-from($screen-md) {
+        margin-right: 15px;
+        margin-bottom: 0;
+      }
     }
   }
 
   &__link {
     position: relative;
     border-bottom: thin solid transparent;
-    color: #e7e7e7;
+    color: $color-white;
 
     &::before {
       content: "";
@@ -21,12 +53,12 @@
       position: absolute;
       left: 0;
       bottom: -2px;
+
       width: 0;
       height: 1px;
 
-      background-color: #e7e7e7;
-
-      transition: width 0.2s linear;
+      background-color: $color-white;
+      transition: width $transition-normal;
     }
 
     &:not(:last-child) {
@@ -35,13 +67,13 @@
 
     &.m-active {
       &::before {
-         width: 100%;
+        width: 100%;
       }
     }
 
     @include hover {
       &::before {
-         width: 100%;
+        width: 100%;
       }
     }
   }

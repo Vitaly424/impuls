@@ -1,8 +1,13 @@
 .logo {
   font-weight: 700;
-  font-size: 40px;
+  text-shadow: 1px 3px 4px #fff;
+  font-size: 30px;
+ 
+  @include w-from($screen-md) {
+    font-size: 40px;
+  }
 
   a {
-    color: #9b9b9b;
+    color: #fff;
   }
 }

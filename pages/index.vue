@@ -1,15 +1,19 @@
 <template>
-  <div class="container">
-    <h1 class="title">Главная <br> в разработке</h1>
+  <div class="page">
+    <MainSlider />
+    <About />
   </div>
 </template>
 
 <script>
-import axios from "axios";
+import MainSlider from "@/components/MainSlider/MainSlider.vue";
+import About from "@/components/About/About.vue";
 
 export default {
   name: "IndexPage",
+  components: { MainSlider, About },
 };
 </script>
 
-<style></style>
+<style>
+</style>

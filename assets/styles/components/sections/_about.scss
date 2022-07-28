@@ -1,0 +1,49 @@
+.about {
+   margin-top: 80px;
+   margin-bottom: 80px;
+   padding: 50px 0;
+
+   box-shadow: 0 0px 18px 2px $color-gray;
+
+   background-image: url('@/static/main/about/time-bg.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+
+   &__content {
+      max-width: 800px;
+      padding: 20px;
+
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 0 11px 4px #333;
+   }
+
+   &__title {
+      color: $color-gray;
+      text-align: left;
+      
+      margin-bottom: 20px;
+   }
+
+   &__img {
+      margin-left: auto;
+   }
+
+   &__info {
+      margin-bottom: 25px;
+      color: $color-gray;
+
+      p {
+         font-size: 16px;
+
+         @include w-from($screen-md) {
+            font-size: 20px;
+         }
+      }
+
+      & > *:not(:last-child) {
+         margin-bottom: 15px;
+      }
+   }
+}

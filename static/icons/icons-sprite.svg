@@ -1,0 +1,9 @@
+<svg>
+   <symbol id="i-arrow-right" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="16.172 9 10.101 2.929 11.515 1.515 20 10 19.293 10.707 11.515 18.485 10.101 17.071 16.172 11 0 11 0 9" />
+   </symbol>
+
+   <symbol id="i-arrow-left" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="3.828 9 9.899 2.929 8.485 1.515 0 10 .707 10.707 8.485 18.485 9.899 17.071 3.828 11 20 11 20 9 3.828 9" />
+   </symbol>
+</svg>

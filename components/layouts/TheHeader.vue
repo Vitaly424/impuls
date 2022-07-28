@@ -7,7 +7,7 @@
           <nuxt-link to="/">IMPULS</nuxt-link>
         </div>
 
-        <nav class="nav">
+        <nav :class="['nav', 'mod-only-md', {'m-active': isMenu}]">
           <ul class="nav__list">
             <li class="nav__item" v-for="item in menu" :key="item.id">
               <nuxt-link class="nav__link" exact-active-class="m-active" :to="item.path">
@@ -16,6 +16,12 @@
             </li>
           </ul>
         </nav>
+
+        <button :class="['burger-menu', 'mod-no-md ', {'m-active': isMenu}]" @click="openMenu">
+           <span class="burger-menu__item"></span>
+           <span class="burger-menu__item"></span>
+           <span class="burger-menu__item"></span>
+        </button>
 
       </div>
     </div>
@@ -26,6 +32,7 @@
 export default {
   data() {
     return {
+      isMenu: false,
       menu: [
         {
           id: 1,
@@ -50,5 +57,10 @@ export default {
       ],
     };
   },
+  methods: {
+    openMenu() {
+      this.isMenu = !this.isMenu;
+    }
+  }
 };
 </script>
