@@ -12,10 +12,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 from pathlib import Path
 
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 
-load_dotenv()
+#load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +25,7 @@ PROJECT_ROOT = os.path.dirname(__file__)
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = 'django-insecure-zl@7n1oubs#)+v#muee0qy#z%t4qa#k@b%@_zt401wct0*)!33'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -83,11 +83,11 @@ WSGI_APPLICATION = 'watch_store.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ['db_name'],
-        'HOST': os.environ['db_localhost'],
-        'PORT': os.environ['db_port'],
-        'USER': os.environ['db_user'],
-        'PASSWORD': os.environ['db_password'],
+        'NAME': 'impuls',#os.environ['db_name'],
+        'HOST': 'localhost',#os.environ['db_localhost'],
+        'PORT': '5432',#os.environ['db_port'],
+        'USER': 'postgres',#os.environ['db_user'],
+        'PASSWORD': 'hjcnbrkjk321',#os.environ['db_password'],
         # 'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
